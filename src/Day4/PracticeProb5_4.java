@@ -14,8 +14,8 @@ public class PracticeProb5_4 {
         double triHeight = 5;
         double circRadius = 5;
         System.out.println("밑변 = " + triBottom + " cm, 높이 = " + triHeight
-                + " cm 인 삼각형의 넓이 = " + calcTriangleArea(triBottom, triHeight) + " cm2");
+                + " cm 인 삼각형의 넓이 = " + calcTriangleArea(triBottom, triHeight) + " cm²");
         System.out.println("반지름의 길이 = " + circRadius +" cm 인 원의 넓이 = "
-                + calcCircleArea(circRadius) + " cm2");
+                + calcCircleArea(circRadius) + " cm²");
     }
 }
