@@ -6,6 +6,7 @@ public class PracProb6_1 {
 
         // 3초간 기다림
 
+        Thread.sleep(3000);
         System.out.println("끝");
     }
 }
