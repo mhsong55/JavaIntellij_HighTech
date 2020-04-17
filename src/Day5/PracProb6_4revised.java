@@ -55,8 +55,9 @@ public class PracProb6_4revised {
         for (long i = 0L; i < tries; i++) {
             double x = PracProb6_4.makeCoordinate();
             double y = PracProb6_4.makeCoordinate();
-            if (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) <= 1)
+            if (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) <= 1) {
                 hits++;
+            }
             countPrint(i, tries, hits, countCriterion, initTime);
         }
         double piEstimate = 4.0 * hits / tries;

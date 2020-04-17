@@ -23,7 +23,9 @@ public class WriteToFile {
             e.printStackTrace();
         } finally {
             try {
-                if (writer != null) writer.close();
+                if (writer != null) {
+                    writer.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }

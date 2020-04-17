@@ -1,4 +1,4 @@
-package Day5.calcapp;
+package Day5;
 
 public class PracProb6_1revised {
     public static void main(String[] args) throws Exception {
