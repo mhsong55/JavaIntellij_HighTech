@@ -1,5 +1,8 @@
 package Day6Chap8;
 
+import Game.Hero;
+import Game.Kinoko;
+
 public class Ex8_16 {
     public static void main(String[] args) {
         Hero hero = new Hero();

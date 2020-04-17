@@ -1,12 +1,14 @@
 package Day6Chap8;
 
+import Game.Hero;
+
 public class Ex8_1 {
     public static void main(String[] args) {
         // 가상 세계에 용사를 생성
         Hero hero = new Hero();
-
-        // 생성된 용사에게 최초의 HP와 이름을 설정
         hero.name = "명훈";
+        // 생성된 용사에게 최초의 HP와 이름을 설정
+
         hero.hp = 100;
         System.out.println("용사 " + hero.name + " 를 생성했습니다!");
 
