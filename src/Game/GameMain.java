@@ -1,19 +1,25 @@
 package Game;
 
 public class GameMain {
-    public static void main(String[] args) {
-        Hero.setRanmdomMoney();
-        System.out.println(Hero.money);
+    static void printStatus(Cleric cleric) {
+        System.out.println("cleric " + cleric.name + "의 상태");
+        System.out.println("HP/maxHP: " + cleric.hp + "/" + cleric.MAX_HP);
+        System.out.println("MP/maxMP: " + cleric.mp + "/" + cleric.MAX_MP);
+        System.out.println("===================");
+    }
 
-        Hero hero = new Hero();
-        System.out.println(hero.money);
+    public static void main(String[] args) {
+        Cleric cleric1 = new Cleric("박지성", 40, 10);
+        Cleric cleric2 = new Cleric("손흥민", 40);
+        Cleric cleric3 = new Cleric("차범근");
+
+        printStatus(cleric1);
+        printStatus(cleric2);
+        printStatus(cleric3);
     }
 }
 
 
-//        Cleric cleric = new Cleric();
-//        cleric.name = "명훈";
-//
 //        printStatus(cleric);
 //        int testCycle = 10;
 //        for (int i = 0; i < testCycle; i++) {
@@ -28,8 +34,3 @@ public class GameMain {
 //            printStatus(cleric);
 //        }
 //    }
-//    static void printStatus(Cleric cleric) {
-//        System.out.println("cleric " + cleric.name + "의 상태");
-//        System.out.println("HP/maxHP: " + cleric.hp + "/" + cleric.MAX_HP);
-//        System.out.println("MP/maxMP: " + cleric.mp + "/" + cleric.MAX_MP);
-//        System.out.println("===================");
