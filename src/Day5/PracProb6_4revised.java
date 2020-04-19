@@ -1,5 +1,7 @@
 package Day5;
 
+import MHutils.utilTime;
+
 public class PracProb6_4revised {
     public static void countPrint(long i, long tries, long hits, long countCriterion, long initTime) {
         if (i % countCriterion == 0) {

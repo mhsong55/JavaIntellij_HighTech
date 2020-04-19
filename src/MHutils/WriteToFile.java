@@ -1,4 +1,4 @@
-package Day5;
+package MHutils;
 
 import java.io.File;
 import java.io.FileWriter;

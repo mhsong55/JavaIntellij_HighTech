@@ -1,10 +1,25 @@
 package Game;
 
 public class Hero {
-    public String name;
-    public int hp;
+    String name;
+    int hp;
+    static int money;
+    Sword sword;
+
+    // 기본 생성자 (Constructor)
+    Hero() {
+        this("김영웅");  // 두번째 생성자 호출
+    }
+
+    // 생성자 오버로드
+    Hero(String name) {
+        hp = 100;
+        this.name = name;
+    }
 
     void attack() {
+        System.out.println(this.name + "는 공격했다");
+        System.out.println("적에게 5포인트의 데미지를 주었다");
     }
 
     public void run() {

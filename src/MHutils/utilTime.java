@@ -1,4 +1,4 @@
-package Day5;
+package MHutils;
 
 public class utilTime {
     public static double diffTimeSec(long initTime) {
