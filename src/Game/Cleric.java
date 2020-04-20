@@ -1,11 +1,12 @@
 package Game;
 
 public class Cleric {
+    final static int MAX_HP = 50;
+    final static int MAX_MP = 10;
+
     String name;
     int hp;
     int mp;
-    final static int MAX_HP = 50;
-    final static int MAX_MP = 10;
 
     // A) 생성자
     Cleric(String name, int hp, int mp) {
@@ -16,18 +17,13 @@ public class Cleric {
 
     // B) 생성자 overload
     Cleric(String name, int hp) {
-        this.name = name;
-        this.hp = hp;
-        mp = MAX_MP;
+        this(name, hp, MAX_MP);
     }
 
     // C) 생성자 overload
     Cleric(String name) {
-        this.name = name;
-        hp = MAX_HP;
-        mp = MAX_MP;
+        this(name, MAX_HP, MAX_MP);
     }
-
     /**
      * Self Aid
      * recovery for Cleric-self
