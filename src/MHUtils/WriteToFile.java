@@ -1,4 +1,4 @@
-package MHutils;
+package MHUtils;
 
 import java.io.File;
 import java.io.FileWriter;

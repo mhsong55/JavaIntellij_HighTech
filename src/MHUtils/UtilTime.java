@@ -1,6 +1,6 @@
-package MHutils;
+package MHUtils;
 
-public class utilTime {
+public class UtilTime {
     public static double diffTimeSec(long initTime) {
         long finalTime = System.currentTimeMillis();
         System.out.println("Current operation time : " + ((finalTime - initTime) / 1000L) + " sec");

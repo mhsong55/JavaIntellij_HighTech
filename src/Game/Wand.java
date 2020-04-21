@@ -1,5 +1,7 @@
 package Game;
 
+import MHUtils.SetValidation;
+
 public class Wand {
     private String name;    // 지팡이의 이름
     private double power;   // 지팡이의 마력
@@ -37,9 +39,7 @@ public class Wand {
      * @param name
      */
     public void setName(String name) {
-        if (name == null) {
-            throw new IllegalArgumentException("지팡이의 이름은 null이 아니어야 함");
-        }
+        SetValidation.setNameValidate(this, name);
         this.name = name;
     }
 
@@ -50,9 +50,7 @@ public class Wand {
      * @param power
      */
     public void setPower(double power) {
-        if ((power > 100) || (power < 0.5)) {
-            throw new IllegalArgumentException("지팡이의 마력은 0.5 이상 100.0 이하 이어야 함");
-        }
+        SetValidation.setPowerValidate(this, power);
         this.power = power;
     }
 }

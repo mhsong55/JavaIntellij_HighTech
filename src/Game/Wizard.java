@@ -1,9 +1,11 @@
 package Game;
 
+import MHUtils.SetValidation;
+
 public class Wizard {
     // 모든 필드에 대해 정석에 따라 getter 메소드와 setter 메소드를 작성
-    private final static int MAX_HP = 50;
-    private final static int MAX_MP = 10;
+    public final static int MAX_HP = 50;
+    public final static int MAX_MP = 10;
 
     private int hp;
     private int mp;
@@ -13,8 +15,8 @@ public class Wizard {
     // Constructor
     public Wizard(String name, int hp, int mp) {
         this.name = name;
-        this.hp = Math.min(MAX_HP, hp);
-        this.mp = Math.min(MAX_MP, mp);
+        this.hp = hp;
+        this.mp = mp;
     }
 
     // Constructor Overload 1
@@ -68,41 +70,15 @@ public class Wizard {
     }
 
     /**
-     * getMaxHp()
-     * getter method of class final field of int MAX_HP
-     *
-     * @return MAX_HP
-     */
-    public int getMaxHp() {
-        return MAX_HP;
-    }
-
-    /**
-     * getMaxMp()
-     * getter method of class final field of int MAX_MP
-     *
-     * @return MAX_MP
-     */
-    public int getMaxMp() {
-        return MAX_MP;
-    }
-    // setter 메소드에 대해서 인수의 타당성 검사는 하지 않아도 됨
-
-    /**
      * setHp()
      * setter method of instance field of int hp
      *
      * @param hp
      */
     public void setHp(int hp) {
-        if (hp <= 0) {
-            throw new IllegalArgumentException("HP는 0 이상이어야 함");
-        }
-        if (hp < 0) {
-            this.hp = 0;
-        } else {
-            this.hp = Math.min(MAX_HP, hp);
-        }
+        SetValidation.setHpValidate(this, mp);
+        this.hp = Math.max(mp, 0);
+        this.hp = Math.min(MAX_HP, hp);
     }
 
     /**
@@ -112,14 +88,9 @@ public class Wizard {
      * @param mp
      */
     public void setMp(int mp) {
-        if (mp <= 0) {
-            throw new IllegalArgumentException("MP는 0 이상이어야 함");
-        }
-        if (mp < 0) {
-            this.mp = 0;
-        } else {
-            this.mp = Math.min(MAX_MP, mp);
-        }
+        SetValidation.setMpValidate(this, mp);
+        this.mp = Math.max(mp, 0);
+        this.mp = Math.min(MAX_MP, mp);
     }
 
     /**
@@ -129,12 +100,7 @@ public class Wizard {
      * @param name
      */
     public void setName(String name) {
-        if (name == null) {
-            throw new IllegalArgumentException("이름은 null이 아니어야 함");
-        }
-        if (name.length() < 3) {
-            throw new IllegalArgumentException("이름은 3글자 이상이어야 함");
-        }
+        SetValidation.setNameValidate(this, name);
         this.name = name;
     }
 
@@ -145,14 +111,11 @@ public class Wizard {
      * @param wand
      */
     public void setWand(Wand wand) {
-        if (wand == null) {
-            throw new IllegalArgumentException("지팡이는 null이 아니어야 함");
-        }
+        SetValidation.setWandValidate(this, wand);
         this.wand = wand;
     }
 
     // heal 메소드에서 발생하는 컴파일 에러 해결
-
     /**
      * heal(Hero hero)
      * hero instance의 HP를 회복시킨다.
@@ -164,7 +127,7 @@ public class Wizard {
         int basePoint = 10;     // 기본 회복 포인트
         int recovPoint = (int) (basePoint * this.wand.getPower());  // 지팡이에 의한 증폭
         int decMp = 3;                                              // MP 소모량
-        if (hero.getHp() == hero.getMaxHp()) {
+        if (hero.getHp() == Hero.MAX_HP) {
             System.out.println(hero.getName() + "의 HP를 더 회복할 수 없다!");
             System.out.println("===================");
         } else if (getMp() < 3) {
@@ -172,11 +135,10 @@ public class Wizard {
             System.out.println("===================");
         } else if (getMp() >= 3) {
             int beforeHp = hero.getHp();
-            hero.setHp(Math.min(hero.getMaxHp(), hero.getHp() + recovPoint));   // 용사의 HP를 회복
+            hero.setHp(Math.min(Hero.MAX_HP, hero.getHp() + recovPoint));   // 용사의 HP를 회복
             System.out.println(hero.getName() + "의 HP가 " + (hero.getHp() - beforeHp) + "회복!");
             System.out.println("===================");
             setMp(getMp() - decMp);
         }
     }
 }
-

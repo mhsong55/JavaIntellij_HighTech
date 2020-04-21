@@ -1,7 +1,7 @@
 package Day5;
 
-import MHutils.WriteToFile;
-import MHutils.utilTime;
+import MHUtils.WriteToFile;
+import MHUtils.UtilTime;
 
 public class PracProb6_4revised2 {
     public static void countPrint(long i, long hits, long countCriterion, long initTime) {
@@ -12,7 +12,7 @@ public class PracProb6_4revised2 {
             System.out.println("estiError = " + String.format("%E", calcEstiError(piEstimate)));
             String text = i + " " + piEstimate + " "
                     + String.format("%E", calcEstiError(piEstimate)) + " "
-                    + utilTime.diffTimeSec(initTime) + "\n";
+                    + UtilTime.diffTimeSec(initTime) + "\n";
             String fileName = "test";
             WriteToFile.ToText(text, fileName, true);
         }

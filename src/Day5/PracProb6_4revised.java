@@ -1,6 +1,6 @@
 package Day5;
 
-import MHutils.utilTime;
+import MHUtils.UtilTime;
 
 public class PracProb6_4revised {
     public static void countPrint(long i, long tries, long hits, long countCriterion, long initTime) {
@@ -12,35 +12,35 @@ public class PracProb6_4revised {
                 double piEstimate = 4.0 * hits / i;
                 System.out.println("piEstimate = " + piEstimate);
                 System.out.println("estiError = " + calcEstiError(piEstimate));
-                utilTime.diffTimeSec(initTime, 0);
+                UtilTime.diffTimeSec(initTime, 0);
             } else if (i == 100000) {
                 System.out.println("i = " + i);
                 double piEstimate = 4.0 * hits / i;
                 System.out.println("piEstimate = " + piEstimate);
                 System.out.println("estiError = " + calcEstiError(piEstimate));
-                utilTime.diffTimeSec(initTime, 0);
+                UtilTime.diffTimeSec(initTime, 0);
             } else if (i == 1000000) {
                 System.out.println("i = " + i);
                 double piEstimate = 4.0 * hits / i;
                 System.out.println("piEstimate = " + piEstimate);
                 System.out.println("estiError = " + calcEstiError(piEstimate));
-                utilTime.diffTimeSec(initTime, 0);
+                UtilTime.diffTimeSec(initTime, 0);
             } else if (i == 10000000) {
                 System.out.println("i = " + i);
                 double piEstimate = 4.0 * hits / i;
                 System.out.println("piEstimate = " + piEstimate);
                 System.out.println("estiError = " + calcEstiError(piEstimate));
-                utilTime.diffTimeSec(initTime, 0);
+                UtilTime.diffTimeSec(initTime, 0);
             } else if (i == 100000000) {
                 System.out.println("i = " + i);
                 double piEstimate = 4.0 * hits / i;
                 System.out.println("piEstimate = " + piEstimate);
                 System.out.println("estiError = " + calcEstiError(piEstimate));
-                utilTime.diffTimeSec(initTime, 0);
+                UtilTime.diffTimeSec(initTime, 0);
             }
         } else if (i == tries - 1) {
             System.out.println("i = " + (i + 1));
-            utilTime.diffTimeSec(initTime, 1);
+            UtilTime.diffTimeSec(initTime, 1);
         }
     }
 

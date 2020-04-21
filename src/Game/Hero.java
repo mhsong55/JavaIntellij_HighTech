@@ -1,8 +1,8 @@
 package Game;
 
 public class Hero {
-    private final static int MAX_HP = 100;
-    private static int money;
+    public final static int MAX_HP = 100;
+    public static int money;
 
     private String name;
     private int hp;
@@ -41,41 +41,12 @@ public class Hero {
     }
 
     /**
-     * getMaxHp()
-     * getter method of class final field of int MAX_HP
-     *
-     * @return MAX_HP
-     */
-    public int getMaxHp() {
-        return MAX_HP;
-    }
-
-    /**
-     * getMoney()
-     * getter method of class field of int money
-     *
-     * @return money
-     */
-    public int getMoney() {
-        return money;
-    }
-
-    /**
      * setName(String name)
      * setter method of instance field of String name
      *
      * @param name
      */
     public void setName(String name) {
-        if (name == null) {
-            throw new IllegalArgumentException("이름은 null이 아니어야 함");
-        }
-        if (name.length() <= 1) {
-            throw new IllegalArgumentException("이름 너무 짧음");
-        }
-        if (name.length() >= 8) {
-            throw new IllegalArgumentException("이름 너무 긺");
-        }
         this.name = name;
     }
 
@@ -107,10 +78,7 @@ public class Hero {
     public void attack(Kinoko enemy) {
         System.out.println(this.name + "의 공격!");
         System.out.println("괴물 버섯 " + enemy.suffix);
-        this.hp -= 2;
-        if (this.hp <= 0) {
-            this.die();
-        }
+        enemy.hp -= 2;
     }
 
     public void sleep() {
