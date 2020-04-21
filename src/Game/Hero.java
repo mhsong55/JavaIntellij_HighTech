@@ -77,8 +77,8 @@ public class Hero {
 
     public void attack(Kinoko enemy) {
         System.out.println(this.name + "의 공격!");
-        System.out.println("괴물 버섯 " + enemy.suffix);
-        enemy.hp -= 2;
+        System.out.println("괴물 버섯 " + enemy.getSuffix());
+        setHp(enemy.getHp() - 2);
     }
 
     public void sleep() {
@@ -111,4 +111,3 @@ public class Hero {
         }
     }
 }
-
