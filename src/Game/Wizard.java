@@ -123,22 +123,22 @@ public class Wizard {
      *
      * @param hero
      */
-    public void heal(Hero hero) {
-        int basePoint = 10;     // 기본 회복 포인트
-        int recovPoint = (int) (basePoint * this.wand.getPower());  // 지팡이에 의한 증폭
-        int decMp = 3;                                              // MP 소모량
-        if (hero.getHp() == Hero.MAX_HP) {
-            System.out.println(hero.getName() + "의 HP를 더 회복할 수 없다!");
-            System.out.println("===================");
-        } else if (getMp() < 3) {
-            System.out.println(getName() + "의 MP가 부족하다!");
-            System.out.println("===================");
-        } else if (getMp() >= 3) {
-            int beforeHp = hero.getHp();
-            hero.setHp(Math.min(Hero.MAX_HP, hero.getHp() + recovPoint));   // 용사의 HP를 회복
-            System.out.println(hero.getName() + "의 HP가 " + (hero.getHp() - beforeHp) + "회복!");
-            System.out.println("===================");
-            setMp(getMp() - decMp);
-        }
-    }
+//    public void heal(Hero hero) {
+//        int basePoint = 10;     // 기본 회복 포인트
+//        int recovPoint = (int) (basePoint * this.wand.getPower());  // 지팡이에 의한 증폭
+//        int decMp = 3;                                              // MP 소모량
+//        if (hero.getHp() == Hero.MAX_HP) {
+//            System.out.println(hero.getName() + "의 HP를 더 회복할 수 없다!");
+//            System.out.println("===================");
+//        } else if (getMp() < 3) {
+//            System.out.println(getName() + "의 MP가 부족하다!");
+//            System.out.println("===================");
+//        } else if (getMp() >= 3) {
+//            int beforeHp = hero.getHp();
+//            hero.setHp(Math.min(Hero.MAX_HP, hero.getHp() + recovPoint));   // 용사의 HP를 회복
+//            System.out.println(hero.getName() + "의 HP가 " + (hero.getHp() - beforeHp) + "회복!");
+//            System.out.println("===================");
+//            setMp(getMp() - decMp);
+//        }
+//    }
 }
