@@ -14,6 +14,10 @@ public abstract class TangibleAsset extends Asset implements Thing {
         return color;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public double getWeight() {
         return weight;
