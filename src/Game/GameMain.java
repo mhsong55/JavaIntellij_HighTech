@@ -2,9 +2,7 @@ package Game;
 
 public class GameMain {
     public static void main(String[] args) {
-        // Hero나 Wizard가 아닌 Character를 new 해 버렸다
-        Kinoko kinoko = new Kinoko('A');
-        // 오버라이드 하지 않았는데 아무 동작도 안함
+
     }
 }
 //    static void printStatus(Hero hero) {
