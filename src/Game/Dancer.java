@@ -2,7 +2,7 @@ package Game;
 
 public class Dancer extends Character {
     @Override
-    public void attack(Kinoko kinoko) {
+    public void attack(Cleric.Kinoko kinoko) {
     }
 
     public void dance() {

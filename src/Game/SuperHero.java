@@ -4,7 +4,7 @@ public class SuperHero extends Hero {
     private boolean flying;
 
     @Override
-    public void attack(Kinoko enemy) {
+    public void attack(Cleric.Kinoko enemy) {
 //        super.attack(enemy);
 
         if (this.flying) {

@@ -75,7 +75,8 @@ public class Hero extends Character {
         System.out.println("Game Over");
     }
 
-    public void attack(Kinoko enemy) {
+    @Override
+    public void attack(Cleric.Kinoko enemy) {
         System.out.println(this.name + "의 공격!");
         System.out.println("괴물 버섯 " + enemy.getSuffix());
         setHp(enemy.getHp() - 2);
