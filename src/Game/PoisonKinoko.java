@@ -1,6 +1,6 @@
 package Game;
 
-public class PoisonKinoko extends Cleric.Kinoko {
+public class PoisonKinoko extends Kinoko {
     private int poisonAttackCount;
 
     public PoisonKinoko(char suffix) {

@@ -1,6 +1,6 @@
 package MHUtils;
 
-public class UtilTime {
+public class Util {
     public static double diffTimeSec(long initTime) {
         long finalTime = System.currentTimeMillis();
         System.out.println("Current operation time : " + ((finalTime - initTime) / 1000L) + " sec");
@@ -15,5 +15,13 @@ public class UtilTime {
         } else if (mod == 1) {
             System.out.println("Total operation time: " + diffTime + " sec");
         }
+    }
+
+    public static String stringAdd(String str) {
+        String strAddResult;
+        StringBuilder sb = new StringBuilder();
+        sb.append(str);
+        strAddResult = sb.toString();
+        return strAddResult;
     }
 }
