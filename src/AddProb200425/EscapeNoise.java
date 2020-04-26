@@ -134,13 +134,16 @@ public class EscapeNoise {
         String str;
         ArrayList<ShadeOfTree> treeList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+
         // 공사 현장 정보 입력
         str = scanner.nextLine();
         input = strInputToIntArrayList(str);
         Field consField = new ConstructionField(input);
+
         // 나무 수 입력
         str = scanner.nextLine();
         int numTree = Integer.parseInt(str);
+        
         // 나무 좌표 입력
         for (int i = 0; i < numTree; i++) {
             str = scanner.nextLine();
