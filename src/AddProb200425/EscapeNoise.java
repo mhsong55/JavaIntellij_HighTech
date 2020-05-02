@@ -68,7 +68,7 @@ public class EscapeNoise {
 //    // next()로 처리
 //    public static void main(String[] args) {
 //        ArrayList<Integer> input = new ArrayList<>();
-//        String str;
+//        String str = "";
 //        ArrayList<ShadeOfTree> treeList = new ArrayList<>();
 //        Scanner scanner = new Scanner(System.in);
 //        // 공사 현장 정보 입력
@@ -130,8 +130,8 @@ public class EscapeNoise {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> input;
-        String str;
+        ArrayList<Integer> input = new ArrayList<>();
+        String str = "";
         ArrayList<ShadeOfTree> treeList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
@@ -143,7 +143,7 @@ public class EscapeNoise {
         // 나무 수 입력
         str = scanner.nextLine();
         int numTree = Integer.parseInt(str);
-        
+
         // 나무 좌표 입력
         for (int i = 0; i < numTree; i++) {
             str = scanner.nextLine();
